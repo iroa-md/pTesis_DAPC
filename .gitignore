@@ -1,0 +1,41 @@
+# ── pTesis_DAPC · qué se publica ─────────────────────────────────────────────
+#
+# Lista blanca: se ignora TODO por omisión y se admite solo lo declarado abajo.
+# Un archivo nuevo queda fuera salvo que alguien lo agregue aquí a propósito, de
+# modo que ningún dato de pacientes pueda subirse por descuido.
+#
+# El repositorio NO distribuye datos. Los cuadernos no son ejecutables de extremo
+# a extremo sin la base del proyecto FONIS, que no se publica.
+
+*
+
+!.gitignore
+!README.md
+!environment.yml
+!LICENSE
+
+# Los dos cuadernos de la reestructuración
+!01_cohorte.ipynb
+!02_modelamiento.ipynb
+
+# Los módulos, sin los compilados
+!utils/
+!utils/*.py
+
+# El catálogo de variables: metadato del estudio, no datos de pacientes. Sin él
+# los cuadernos no arrancan.
+!db/
+!db/metadatos.xlsx
+
+# ── Negaciones explícitas ────────────────────────────────────────────────────
+# Redundantes frente a la lista blanca, pero dejan la intención por escrito y
+# protegen si alguien alguna vez la relaja.
+data/
+salida/
+*.parquet
+*.xlsx
+!db/metadatos.xlsx
+*.pyc
+__pycache__/
+.DS_Store
+.ipynb_checkpoints/
